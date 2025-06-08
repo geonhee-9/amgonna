@@ -53,17 +53,20 @@ function renderProductDetail() {
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
     const product = products.find(p => p.id === id);
-    if (!product) {
-        detailSection.innerHTML = '<p>Product not found.</p>';
-        return;
-    }
-    detailSection.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>${product.description}</p>
-        <p>Price: $${product.price.toFixed(2)}</p>
-        <button onclick="addToCart(${product.id})">Add to Cart</button>
-    `;
+    cart.push(product);
+    renderCart();
+    showMessage('Added to cart');
+}
+
+function showMessage(text) {
+    const el = document.getElementById('message');
+    if (!el) return;
+    el.textContent = text;
+    el.style.display = 'block';
+    clearTimeout(showMessage.timeoutId);
+    showMessage.timeoutId = setTimeout(() => {
+        el.style.display = 'none';
+    }, 2000);
 }
 
 function renderCartPage() {

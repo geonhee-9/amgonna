@@ -1,22 +1,8 @@
 # AmGonna Shop
 
-A simple demo storefront built with HTML, CSS and JavaScript. Browse products, view details, add them to your cart and complete a basic checkout process.
+
+This repository contains a basic static shop made with HTML and CSS.
 
 ## Getting Started
 
-Open `index.html` in your browser or run a small web server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000/index.html`.
-
-## Features
-
-- Product listings with images and descriptions
-- Individual product pages
-- Persistent cart stored in your browser
-- Checkout form that clears the cart
-- Remove items from the cart
-- Order summary on the checkout page
+Open `index.html` in your browser to view the T‑shirt product page. Use the **Buy** button to go to the payment page. After transferring the amount to the listed account, click **Complete Payment** to see the confirmation page.

@@ -2,22 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AmGonna Shop</title>
+    <title>T-Shirt Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>AmGonna Shop</h1>
-        <nav>
-            <a href="cart.html">Cart</a>
-        </nav>
+        <h1>T-Shirt Store</h1>
     </header>
 
-    <section id="products">
-        <!-- products will be rendered here -->
-    </section>
+    <main class="product-page">
+        <div class="product-detail">
+            <img src="https://via.placeholder.com/600x400?text=T-Shirt" alt="T-Shirt">
+            <p class="price">$19.99</p>
+            <p class="desc">
+                Comfortable cotton t-shirt available in multiple sizes. Scroll down for more details about material and shipping information.
+            </p>
+            <button id="buy-btn">Buy</button>
+        </div>
+        <section class="product-info">
+            <h2>Product Details</h2>
+            <p>
+                This classic t-shirt is made from 100% cotton and features a relaxed fit. Perfect for everyday wear. Shipping typically takes 3-5 business days.
+            </p>
+        </section>
+    </main>
 
-    <script src="products.js"></script>
-    <script src="script.js"></script>
+    <script>
+    document.getElementById('buy-btn').addEventListener('click', function () {
+        window.location.href = 'pay.html';
+    });
+    </script>
 </body>
 </html>
