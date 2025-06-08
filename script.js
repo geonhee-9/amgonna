@@ -25,6 +25,18 @@ function addToCart(id) {
     const product = products.find(p => p.id === id);
     cart.push(product);
     renderCart();
+    showMessage('Added to cart');
+}
+
+function showMessage(text) {
+    const el = document.getElementById('message');
+    if (!el) return;
+    el.textContent = text;
+    el.style.display = 'block';
+    clearTimeout(showMessage.timeoutId);
+    showMessage.timeoutId = setTimeout(() => {
+        el.style.display = 'none';
+    }, 2000);
 }
 
 function renderCart() {
