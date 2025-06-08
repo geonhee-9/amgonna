@@ -1,7 +1,22 @@
-# Simple Shopping Mall
+# AmGonna Shop
 
-This repository contains a minimal static shopping site built with HTML, CSS and JavaScript.
+A simple demo storefront built with HTML, CSS and JavaScript. Browse products, view details, add them to your cart and complete a basic checkout process.
 
 ## Getting Started
 
-Open `index.html` in your browser to view the store. You can add items to the cart and see the total amount.
+Open `index.html` in your browser or run a small web server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000/index.html`.
+
+## Features
+
+- Product listings with images and descriptions
+- Individual product pages
+- Persistent cart stored in your browser
+- Checkout form that clears the cart
+- Remove items from the cart
+- Order summary on the checkout page
