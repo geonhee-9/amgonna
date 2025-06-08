@@ -1,4 +1,5 @@
-# Simple Shopping Mall
+# AmGonna Shop
+
 
 This repository contains a basic static shop made with HTML and CSS.
 
