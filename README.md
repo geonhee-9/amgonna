@@ -18,3 +18,5 @@ Then visit `http://localhost:8000/index.html`.
 - Individual product pages
 - Persistent cart stored in your browser
 - Checkout form that clears the cart
+- Remove items from the cart
+- Order summary on the checkout page

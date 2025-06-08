@@ -20,6 +20,14 @@ function addToCart(id) {
     alert('Added to cart');
 }
 
+function removeFromCart(id) {
+    let cart = getCart();
+    cart = cart.filter(item => item.id !== id);
+    saveCart(cart);
+    renderCartPage();
+    renderCheckoutSummary();
+}
+
 function renderProductList() {
     const container = document.getElementById('products');
     if (!container) return;
@@ -67,6 +75,22 @@ function renderCartPage() {
     let total = 0;
     cart.forEach(item => {
         const li = document.createElement('li');
+        li.innerHTML = `${item.name} x${item.qty} - $${(item.price * item.qty).toFixed(2)} <button onclick="removeFromCart(${item.id})">Remove</button>`;
+        list.appendChild(li);
+        total += item.price * item.qty;
+    });
+    totalElem.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+function renderCheckoutSummary() {
+    const list = document.getElementById('summary-items');
+    const totalElem = document.getElementById('summary-total');
+    if (!list || !totalElem) return;
+    const cart = getCart();
+    list.innerHTML = '';
+    let total = 0;
+    cart.forEach(item => {
+        const li = document.createElement('li');
         li.textContent = `${item.name} x${item.qty} - $${(item.price * item.qty).toFixed(2)}`;
         list.appendChild(li);
         total += item.price * item.qty;
@@ -88,4 +112,5 @@ function setupCheckout() {
 renderProductList();
 renderProductDetail();
 renderCartPage();
+renderCheckoutSummary();
 setupCheckout();
