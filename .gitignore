@@ -1,0 +1,17 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node dependencies
+node_modules/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+
+# Editor directories
+.idea/
+.vscode/
