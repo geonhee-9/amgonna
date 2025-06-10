@@ -46,3 +46,12 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+footer button {
+    margin-top: 0.5rem;
+    background: #008cba;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
